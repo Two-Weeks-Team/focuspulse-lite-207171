@@ -1,3 +1,4 @@
+// "use client"; (already present at top of file)
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import { create } from 'zustand';
@@ -19,7 +20,8 @@ interface TimerState {
   incrementBlock: () => void;
 }
 
-const useTimerStore = create<TimerState>((set, get) => ({
+// Export the store so other components can import it
+export const useTimerStore = create<TimerState>((set, get) => ({
   running: false,
   mode: 'focus',
   secondsLeft: 1500, // 25min

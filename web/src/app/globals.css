@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #f5f9fc;
+  --color-foreground: #2e2e2e;
+  --color-primary: #0f9d58; /* soft teal */
+  --color-accent: #f9a825; /* amber */
+  --color-success: #a3e0c7; /* mint */
+  --color-warning: #f57c00;
+  --color-card: #ffffff;
+  --color-muted: #e2e8f0;
+  --color-border: #cbd5e1;
+  --radius: 8px;
+  --shadow-soft: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Non‑flat background with subtle radial gradient */
+body {
+  background: radial-gradient(circle at 20% 30%, var(--color-primary) 0%, var(--color-background) 70%);
+}
+
+/* Focus outline for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
